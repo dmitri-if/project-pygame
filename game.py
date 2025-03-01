@@ -29,7 +29,7 @@ class Asteroid(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
 
-        self.image = scale(pygame.image.load("img/asteroid.png"), (50, 50))
+        self.image = scale(pygame.image.load("asteroid.png"), (50, 50))
         self.rect = pygame.Rect(x, y, 50, 50)
         self.yvel = 5
 
@@ -56,7 +56,7 @@ class Bullets(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
 
-        self.image = scale(pygame.image.load("img/puli.png"), (60, 50))
+        self.image = scale(pygame.image.load("puli.png"), (60, 50))
         self.rect = pygame.Rect(x, y, 10, 10)
         self.yvel = 10
 
@@ -72,7 +72,7 @@ class Spaceship(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
 
         self.rect = pygame.Rect(x, y, 50, 75)
-        self.image = scale(pygame.image.load("img/ship.png"), (50, 100))
+        self.image = scale(pygame.image.load("ship.png"), (50, 100))
         self.xvel = 0
         # добавим кораблю здоровье
         self.life = 100
@@ -116,7 +116,7 @@ pygame.init()
 screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Asteroids")
 
-sky = scale(pygame.image.load("img/sky.jpg"), (800, 600))
+sky = scale(pygame.image.load("sky.jpg"), (800, 600))
 
 ship = Spaceship(400, 400)
 
@@ -147,7 +147,7 @@ while True:
                     ship = Spaceship(400, 400)
                     state = "game"
         
-        bg = pygame.image.load('img/menu.jpg').convert()
+        bg = pygame.image.load('menu.jpg').convert()
         screen.blit(bg, (50, 0))
         pygame.draw.rect(screen, "red", pygame.Rect(200, 150, 400, 100))
         pygame.draw.rect(screen, "blue", pygame.Rect(200, 350, 400, 100))
@@ -168,7 +168,7 @@ while True:
                     state = "game"
                     count_kill = 0
         
-        bg = pygame.image.load('img/menu.jpg').convert()
+        bg = pygame.image.load('menu.jpg').convert()
         screen.blit(bg, (50, 0))
         pygame.draw.rect(screen, "red", pygame.Rect(200, 100, 400, 100))
         pygame.draw.rect(screen, "blue", pygame.Rect(200, 270, 400, 100))
